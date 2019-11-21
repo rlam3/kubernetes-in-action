@@ -9,12 +9,12 @@ spec:
       - key: app
         operator: In
         values:
-         - kubia
+          - kubia
   template:
     metadata:
       labels:
         app: kubia
     spec:
       containers:
-      - name: kubia
-        image: luksa/kubia
+        - name: kubia
+          image: aznric3boi91/kubia

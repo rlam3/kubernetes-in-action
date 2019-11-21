@@ -13,5 +13,5 @@ spec:
         spec:
           restartPolicy: OnFailure
           containers:
-          - name: main
-            image: luksa/batch-job
+            - name: main
+              image: aznric3boi91/batch-job

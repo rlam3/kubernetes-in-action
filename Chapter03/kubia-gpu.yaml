@@ -6,5 +6,5 @@ spec:
   nodeSelector:
     gpu: "true"
   containers:
-  - image: luksa/kubia
-    name: kubia
+    - image: aznric3boi91/kubia
+      name: kubia

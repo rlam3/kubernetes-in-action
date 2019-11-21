@@ -6,9 +6,8 @@ spec:
   type: NodePort
   externalTrafficPolicy: Local
   ports:
-  - port: 80
-    targetPort: 8080
-    nodePort: 30124
+    - port: 80
+      targetPort: 8080
+      nodePort: 30124
   selector:
     app: kubia
-

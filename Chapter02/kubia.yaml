@@ -14,9 +14,8 @@ spec:
         run: kubia
     spec:
       containers:
-      - name: kubia
-        image: luksa/kubia:latest
-        ports:
-        - containerPort: 8080
-          protocol: TCP
-      
+        - name: kubia
+          image: aznric3boi91/kubia:latest
+          ports:
+            - containerPort: 8080
+              protocol: TCP

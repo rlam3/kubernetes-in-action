@@ -12,14 +12,13 @@ spec:
         app: kubia
     spec:
       containers:
-      - name: kubia
-        image: luksa/kubia
-        ports:
-        - name: http
-          containerPort: 8080
-        readinessProbe:
-          exec:
-            command:
-            - ls
-            - /var/ready
-
+        - name: kubia
+          image: aznric3boi91/kubia
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            exec:
+              command:
+                - ls
+                - /var/ready

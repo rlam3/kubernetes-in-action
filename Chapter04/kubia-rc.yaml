@@ -12,7 +12,7 @@ spec:
         app: kubia
     spec:
       containers:
-      - name: kubia
-        image: luksa/kubia
-        ports:
-        - containerPort: 8080
+        - name: kubia
+          image: aznric3boi91/kubia
+          ports:
+            - containerPort: 8080
