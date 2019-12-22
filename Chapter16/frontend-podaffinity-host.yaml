@@ -1,9 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
 spec:
   replicas: 5
+  selector:
+    matchLabels:
+      app: frontend
   template:
     metadata:
       labels:
@@ -12,13 +15,13 @@ spec:
       affinity:
         podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-          - topologyKey: kubernetes.io/hostname
-            labelSelector:
-              matchLabels:
-                app: backend
+            - topologyKey: kubernetes.io/hostname
+              labelSelector:
+                matchLabels:
+                  app: backend
       containers:
-      - name: main
-        image: busybox
-        args:
-        - sleep
-        - "99999"
+        - name: main
+          image: busybox
+          args:
+            - sleep
+            - "99999"
